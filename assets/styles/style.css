@@ -76,7 +76,7 @@ nav > ul {
 
 .menu a{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: block;
     padding: 10px;
     color: var(--white);
@@ -190,6 +190,12 @@ nav > ul {
 
     .menu li{
         float: left;
+    }
+
+    .menu a{
+
+        font-size: 1rem;
+
     }
 
     .menu a:hover{
