@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Contest</title>
+</head>
+<body>
+    <header class="header">
+        <div id="containerHeader">
+            <a href="./index.html" class="logo">
+                <img src="./assets/images/logo.png" alt="logo">
+            </a>
+
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a> </li>
+                    <li><a href="#" id="selectedA">Contact</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Contest</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="boxContestMain">
+            <h1>Contest</h1>
+            <h2>Fill the form and win!</h2>
+            <div id="boxContest">
+              <div>
+                <img src="./assets/images/image8.png" alt="">
+                <img src="./assets/images/image9.jpg" alt="">
+              </div>
+              <form action="./show_data.html">
+                <h2>Get the chance to win a football shirt filling this form</h2>
+                <div class="containerDivs">
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" type="text" name="lastName">
+                    </div>
+                </div>
+                <div  class="containerDivs">
+                    <div>
+                        <label for="address">Address</label>
+                        <input id="address" type="text" name="address">
+                    </div>
+                    <div>
+                        <label for="zipCode">Zip code:</label>
+                        <input id="zipCode" type="text" name="zipCode">
+                    </div>
+                </div>
+                <div  class="containerDivs">
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="text" id="age" name="age">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email">
+                    </div>
+                </div>
+                <div  class="containerDivs">
+                    <div>
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="tel" name="phone">
+                    </div>
+                    <div class="radiusBox">
+                        <input type="radio" value="phone" id="phoneOrMobile" name="phoneOrMobile">
+                        <label for="phoneOrMobile" class="genre" >
+                            Phone
+                        </label>
+                        <input type="radio" id="mobile" value="mobile" name="phoneOrMobile">
+                        <label for="mobile" class="genre">
+                            Mobile
+                        </label>
+                    </div>
+                </div>
+                <div  class="containerDivs">
+                    <div class="radiusBox">
+                        <span>Gender:</span>
+                        <input type="radio" value="FEM" id="fem" name="gender">
+                        <label for="fem" class="genre">
+                            FEM
+                        </label>
+                        <input type="radio" id="male" value="MALE" name="gender">
+                        <label for="male" class="genre">
+                            MALE
+                        </label>
+                    </div>
+                </div>
+                <div  class="containerDivs">
+                    <div>
+                        <label for="continent">Continent</label>
+                        <select id="continent" name="continent">
+                            <option value="America">America</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Africa">Africa</option>
+                            <option value="Oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country">
+                    </div>
+                </div>
+                <div>
+                    <div id="boxRadioPayments">
+                        <span>Payment options</span>
+                        <div>
+                            <input id="cash" type="radio" value="cash" name="paymemt">
+                            <label for="cash">Cash</label>
+                            
+                        </div>
+                        <div>
+                            <input id="credit" type="radio" value="credit cards" name="paymemt">
+                            <label for="credit">Credit cards</label>
+                        </div> 
+                        <div>
+                            <input type="radio" id="debit" value="debit cards" name="paymemt">
+                            <label for="debit">Debit cards</label>
+                        </div>
+                    </div>
+                    <div id="textarea">
+                        <label for="services">Services:</label>
+                        <textarea name="services" id="services" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div id="formFooter">
+                    <div>
+                        <input type="checkbox" name="terms" id="terms">
+                        <label for="terms">I accept terms and conditions...</label>
+                    </div>
+                    <input id="submit" type="submit" value="Send"/>
+                </div>
+              </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+        <div>
+            <p>Address: Av. Juan Ramón Vidal, Corrientes</p>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.440593103642!2d-58.818352685431435!3d-27.48666992400451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b777360a965%3A0x1b570dbe8071963b!2sAvenida%20Juan%20Ramon%20Vidal%2C%20Corrientes!5e0!3m2!1sen!2sar!4v1671141218553!5m2!1sen!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="author">
+            <p>Designed & developed</p>
+            <p>by Emiliano Acevedo</p>
+        </div>
+    </footer>
+</body>
+</html>

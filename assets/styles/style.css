@@ -1,0 +1,804 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html, body{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+:root{
+    --white: #f9f9f9;
+    --primary: #8a1538;
+    --secondary: #fc709a;
+}
+
+/*-----------------HEADER-------------------*/
+
+.header{
+
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+  
+
+}
+
+.header > div{
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    margin-left: 10px;
+}
+
+.logo:active{
+
+   transform: scale(0.96);
+
+}
+
+.logo > img {
+
+    height: 80px;
+
+}
+
+/* Nav menu */
+.nav{
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    background-color: var(--primary);
+    overflow: hidden;
+    
+}
+
+nav > ul {
+
+    list-style: none;
+
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    padding: 30px;
+    color: var(--white);
+    text-align: center;
+
+}
+
+
+.menu a:hover{
+    background-color: var(--secondary);
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Responsiveness */
+
+@media (min-width: 990px) {
+
+    header > div{
+        padding-top: 0px !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--secondary);
+        
+    }
+    
+    .hamb{
+        display: none;
+    }
+
+}
+
+/*-----------------------MAIN-----------------------*/
+
+main {
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 226, 226);
+
+}
+
+main > div{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px 20px 20px; 
+    min-height: 80vh;
+    max-width: 1400px;
+
+}
+
+/*-------------------BANNER-HOME---------------------*/
+
+main > div >  img{
+
+    width: 90vw;
+    max-width: 1400px;
+    height: 50vh;
+    object-fit: cover;
+    margin-top: 20px;
+
+}
+
+/*-----------------------BOXINDEX----------------------*/
+
+
+#boxIndex{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 30px;
+
+}
+
+#boxIndex > p {
+
+    width: 300px;
+    font-size: 1.5rem;
+
+}
+
+#boxIndex > img {
+
+    width: 40vw;
+    max-width: 600px;
+
+}
+
+/*-----------------------BOXABOUT----------------------*/
+
+#boxAbout{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+
+}
+
+#boxAbout > div {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.sizeImgP {
+
+    width: 25vw;
+    max-width: 500px;
+    font-size: 1.5rem;
+
+}
+
+/*-----------------------BOXCONTACT----------------------*/
+
+#contactBox > img{
+    max-width: 800px;
+    width: 50vw;
+    height: 500px;
+
+}
+
+#contactBox > div {
+
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#contactBox > div > p {
+
+    width: 100%;
+
+}
+
+#contactBox > div > div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*--------------------SERVICES--------------------------*/
+
+table, th, td {
+    border: 1px solid;
+    padding: 2px;
+    border-collapse: collapse;
+}
+
+th{
+
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+
+}
+
+.textAlignCenter{
+
+    text-align: center;
+
+}
+
+td{
+    background-color: rgb(255, 219, 219);
+    
+}
+
+td, th{
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+/*-----------------------BOXPACKAGES----------------------*/
+
+#containerList {
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+#containerList li{
+ 
+    margin-left: 30px;
+
+}
+
+.list{
+
+    max-width: 90vw;
+    width: 500px;
+
+}
+
+#containerList > div p {
+    width: 100%;
+    max-width: 500px;
+
+}
+
+#containerList > div {
+    column-gap: 50px;
+    display: flex;
+    align-items: center;
+
+}
+/*-----------------------BOXCONTEST----------------------*/
+
+#boxContestMain{
+
+    width: 100%;
+
+}
+
+#boxContest{
+
+    display: flex;
+    margin-top: 20px;
+
+}
+
+#boxContest > div {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+#boxContest > div > img {
+
+    max-width: 400px;
+    margin: 10px;
+
+}
+
+form {
+    background-color:#a02a4e;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    height: 100%;
+}
+
+
+form input, select {
+
+    height: 40px;
+    font-size: 1rem;
+
+}
+
+
+form > h2 {
+
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+form > div {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.containerDivs > div {
+
+    display: flex;
+    align-items: center;
+    width: 300px;
+
+}
+
+select{
+    width: 550px;
+
+}
+
+form label {
+
+    width: 300px;
+    font-size: 20px;
+
+}
+
+.radiusBox{
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+}
+
+.radiusBox > input {
+
+   width: 20px;
+   margin-right: 10px;
+}
+
+.radiusBox > span {
+
+    width: 80px;
+
+}
+
+.radiusBox > .genre{
+
+    width: fit-content;
+    margin-right: 10px;
+}
+
+#boxRadioPayments{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    gap: 15px;
+
+}
+
+#boxRadioPayments > div {
+
+    display: flex;
+    align-items: center;
+   
+
+}
+
+#boxRadioPayments > div > input {
+
+    width: 20px;
+    margin-right: 10px;
+   
+
+}
+
+#textarea{
+
+    display: flex;
+    flex-direction: column;
+ 
+
+}
+
+textarea {
+
+    height: 150px;
+    padding: 10px;
+
+}
+
+#formFooter{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#formFooter > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    gap: 10px;
+}
+
+#formFooter > input {
+
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: white;
+
+}
+
+#submit:hover {
+
+    background-color: #b14f6c;
+
+}
+
+/*-----------------------BOXSHADOW----------------------*/
+
+.boxShadow{
+
+    box-shadow:-4px 4px 5px rgb(0,0,0,0.5);
+
+}
+
+/*-----------------------FOOTER----------------------*/
+
+footer{
+
+    min-height: 10vh;
+    width: 100vw;
+    background-color: #633442;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+#map{
+
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+#author{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#author > p {
+
+    width: 300px !important;
+
+}
+
+
+@media (max-width: 1200px) {
+
+    .sizeImgP {
+
+        width: 35vw;
+        max-width: 500px;
+        font-size: 1.5rem;
+    
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    #boxContest{
+
+        flex-direction: column;
+    }
+
+    #boxContest > div {
+
+       
+        flex-direction: row;
+    
+    }
+    form > div {
+
+        justify-content: center;
+
+    }
+
+}
+
+@media (max-width:1050px) {
+    
+    #contactBox > img{
+        width: 90vw;
+    }
+
+    #containerList > div {
+        column-gap: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    #boxContest > div {
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+}
+
+@media (max-width: 700px) {
+    
+    main > img {
+
+        height: 300px;
+
+    }
+
+    #boxIndex{
+
+        flex-direction: column;
+
+    }
+
+    #boxIndex > p {
+
+        width: 100%;
+
+    }
+
+    #boxIndex > img {
+
+        width: 100%;
+
+    }
+
+    .sizeImgP {
+
+        width: 40vw;
+    
+    }
+
+    
+}
+
+@media (max-width: 690px) {
+
+    form > div {
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    form > div > div {
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    form label, input[type="text"], input[type="email"], select {
+
+        width: 90vw;
+        text-align: center;
+
+    }
+    
+    .radiusBox{
+
+        flex-direction: row;
+    }
+
+    #boxRadioPayments{
+        height: 150px;
+    
+    }
+    
+    #boxRadioPayments > div label {
+    
+        width: 100px;
+        text-align: left;
+    
+    }
+
+    textarea{
+
+        width: 90vw;
+    }
+
+    #formFooter > div {
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #formFooter > div > label {
+
+        width: fit-content;
+        text-align: left;
+
+    }
+}
+
+@media (max-width: 550px) {
+
+    #contactBox > div > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    
+    }
+
+    footer{
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    #boxAbout > div{
+
+        flex-direction: column;
+        gap: 5px;
+
+    }
+
+    .sizeImgP {
+
+        width: 90vw;
+    
+    }
+
+}
