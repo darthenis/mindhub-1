@@ -109,7 +109,7 @@ nav > ul {
     display: block;
     height: 2px;
     position: relative;
-    top: 5px;
+    top: -10px;
     width: 24px;
     
 }
@@ -126,11 +126,11 @@ nav > ul {
 }
 
 .hamb-line::before{
-    top: 10px;
+    top: -10px;
 }
 
 .hamb-line::after{
-    top: -10px;
+    top: 0px;
 }
 
 
@@ -142,7 +142,7 @@ nav > ul {
 
 .side-menu:checked ~ nav{
     max-height: 100%;
-    top: 80px;
+    top: 50px;
 }
 
 .side-menu:checked ~ .hamb .hamb-line {
@@ -151,13 +151,13 @@ nav > ul {
 
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
-    top:0px;
+    top:-5px;
 
 }
 
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
-    top:0px;
+    top:-5px;
 }
 
 
@@ -219,13 +219,13 @@ nav > ul {
 
         position: absolute;
         right: 20px;
-        top: 10px;
+        top: -10px;
     
     }
 
     .nav{
 
-        top:80px;
+        top: 50px;
 
     }
 
